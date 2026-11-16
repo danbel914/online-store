@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopVibe | Shop Smarter, Live Better</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Bootstrap Icons (CSS framework for extra points) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80">
+
+  <!-- ==================== HEADER ==================== -->
+  <header>
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+          <i class="bi bi-bag-heart brand-icon"></i>
+          <span>Shop<span class="text-accent">Vibe</span></span>
+        </a>
+
+        <!-- Cart button stays visible on mobile, beside the hamburger -->
+        <div class="d-flex align-items-center gap-2 order-lg-3">
+          <button class="icon-btn position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartDrawer" aria-label="Open cart">
+            <i class="bi bi-cart3"></i>
+            <span id="cartCount" class="cart-badge">0</span>
+          </button>
+          <a href="#" class="icon-btn d-none d-sm-inline-flex" aria-label="Account"><i class="bi bi-person-circle"></i></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navLinks" aria-controls="navLinks" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+
+        <div class="collapse navbar-collapse order-lg-2" id="navLinks">
+          <ul class="navbar-nav mx-auto gap-lg-3">
+            <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#products">Shop</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+          <form class="search-box my-3 my-lg-0 me-lg-3" role="search" onsubmit="return false;">
+            <input type="search" id="searchInput" placeholder="Search products..." aria-label="Search products">
+            <i class="bi bi-search"></i>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero carousel -->
+    <section id="home" class="hero">
+      <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <div class="container">
+              <div class="row align-items-center hero-row">
+                <div class="col-lg-6 hero-text">
+                  <span class="pill"><i class="bi bi-tag-fill"></i> Best Deals This Season</span>
+                  <h1>Shop Smarter,<br><span class="text-accent">Live Better</span></h1>
+                  <p>Discover trendy fashion, electronics and more at unbeatable prices.</p>
+                  <a href="#products" class="btn btn-accent btn-lg">Shop Now <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="col-lg-6 hero-img">
+                  <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80" alt="Sneaker on display">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row align-items-center hero-row">
+                <div class="col-lg-6 hero-text">
+                  <span class="pill"><i class="bi bi-lightning-charge-fill"></i> New Arrivals</span>
+                  <h1>Sound That<br><span class="text-accent">Moves You</span></h1>
+                  <p>Premium headphones and gadgets, up to 30% off this week only.</p>
+                  <a href="#products" class="btn btn-accent btn-lg">Explore Tech <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="col-lg-6 hero-img">
+                  <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=800&q=80" alt="Headphones">
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <div class="container">
+              <div class="row align-items-center hero-row">
+                <div class="col-lg-6 hero-text">
+                  <span class="pill"><i class="bi bi-truck"></i> Free Delivery</span>
+                  <h1>Style Delivered<br><span class="text-accent">To Your Door</span></h1>
+                  <p>Free shipping on all orders over ₦50,000 — anywhere in Nigeria.</p>
+                  <a href="#products" class="btn btn-accent btn-lg">Start Shopping <i class="bi bi-arrow-right"></i></a>
+                </div>
+                <div class="col-lg-6 hero-img">
+                  <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800&q=80" alt="Wrist watch">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <!-- ==================== PRODUCTS ==================== -->
+    <section id="products" class="section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Our Products</h2>
+          <p>Top picks just for you</p>
+        </div>
+
+        <!-- Filter buttons -->
+        <div class="filters d-flex flex-wrap justify-content-center gap-2 mb-4" role="group" aria-label="Filter products">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="fashion">Fashion</button>
+          <button class="filter-btn" data-filter="accessories">Accessories</button>
+          <button class="filter-btn" data-filter="electronics">Electronics</button>
+        </div>
+
+        <!-- Responsive grid: 1 col on phones, 2 on tablets, 4 on desktop -->
+        <div class="row g-4" id="productGrid">
+          <div class="col-12 col-sm-6 col-lg-3 product-col" data-category="fashion">
+            <article class="product-card">
+              <span class="discount">-20%</span>
+              <button class="wish" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="img-wrap"><img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=600&q=80" alt="White sneakers"></div>
+              <div class="card-body-custom">
+                <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <small>(128)</small></div>
+                <h3>Classic Court Sneakers</h3>
+                <p>Classic sneakers for every occasion.</p>
+                <div class="price"><span>₦75,000</span> <del>₦95,000</del></div>
+                <button class="btn btn-shop w-100" data-name="Classic Court Sneakers" data-price="75000"><i class="bi bi-cart-plus"></i> Shop Now</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 product-col" data-category="fashion">
+            <article class="product-card">
+              <span class="discount">-15%</span>
+              <button class="wish" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="img-wrap"><img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=600&q=80" alt="Black hoodie"></div>
+              <div class="card-body-custom">
+                <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i> <small>(94)</small></div>
+                <h3>Essentials Hoodie</h3>
+                <p>Stay warm and stylish.</p>
+                <div class="price"><span>₦40,000</span> <del>₦47,000</del></div>
+                <button class="btn btn-shop w-100" data-name="Essentials Hoodie" data-price="40000"><i class="bi bi-cart-plus"></i> Shop Now</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 product-col" data-category="accessories">
+            <article class="product-card">
+              <span class="discount">-10%</span>
+              <button class="wish" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="img-wrap"><img src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?w=600&q=80" alt="Leather handbag"></div>
+              <div class="card-body-custom">
+                <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i> <small>(61)</small></div>
+                <h3>Luxury Handbag</h3>
+                <p>Elegance in every detail.</p>
+                <div class="price"><span>₦60,000</span> <del>₦67,000</del></div>
+                <button class="btn btn-shop w-100" data-name="Luxury Handbag" data-price="60000"><i class="bi bi-cart-plus"></i> Shop Now</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="col-12 col-sm-6 col-lg-3 product-col" data-category="electronics">
+            <article class="product-card">
+              <span class="discount">-25%</span>
+              <button class="wish" aria-label="Add to wishlist"><i class="bi bi-heart"></i></button>
+              <div class="img-wrap"><img src="https://images.unsplash.com/photo-1546868871-7041f2a55e12?w=600&q=80" alt="Smart watch"></div>
+              <div class="card-body-custom">
+                <div class="rating"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i> <small>(203)</small></div>
+                <h3>Smart Watch</h3>
+                <p>Track more, live better.</p>
+                <div class="price"><span>₦45,000</span> <del>₦60,000</del></div>
+                <button class="btn btn-shop w-100" data-name="Smart Watch" data-price="45000"><i class="bi bi-cart-plus"></i> Shop Now</button>
+              </div>
+            </article>
+          </div>
+        </div>
+        <p id="noResults" class="text-center text-muted mt-4 d-none">No products match your search.</p>
+      </div>
+    </section>
+
+    <!-- ==================== FEATURES STRIP ==================== -->
+    <section class="container">
+      <div class="features row g-0">
+        <div class="col-6 col-md-3 feature"><i class="bi bi-truck"></i><div><h4>Free Shipping</h4><p>On orders over ₦50,000</p></div></div>
+        <div class="col-6 col-md-3 feature"><i class="bi bi-shield-check"></i><div><h4>Secure Payments</h4><p>Your data is safe</p></div></div>
+        <div class="col-6 col-md-3 feature"><i class="bi bi-headset"></i><div><h4>24/7 Support</h4><p>We're here to help</p></div></div>
+        <div class="col-6 col-md-3 feature"><i class="bi bi-arrow-counterclockwise"></i><div><h4>Easy Returns</h4><p>Hassle-free returns</p></div></div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section about">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6">
+            <div class="about-img">
+              <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=900&q=80" alt="Inside the ShopVibe store">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <span class="pill pill-light">About ShopVibe</span>
+            <h2 class="mt-3">More Than Just a Store</h2>
+            <p class="lead-text">At ShopVibe, we bring you the latest trends, amazing quality and unbeatable prices — all in one place. Shop with confidence and enjoy a seamless experience.</p>
+
+            <!-- Bootstrap accordion -->
+            <div class="accordion my-4" id="faq">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How fast is delivery?</button></h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faq"><div class="accordion-body">Lagos and Abuja orders arrive in 1–2 days; other states in 3–5 business days.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Can I return an item?</button></h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body">Yes — return any unused item within 14 days for a full refund.</div></div>
+              </div>
+            </div>
+
+            <a href="#contact" class="btn btn-dark-green">Learn More <i class="bi bi-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="row g-4 py-5">
+        <div class="col-12 col-md-6 col-lg-3">
+          <a class="footer-brand" href="#home"><i class="bi bi-bag-heart"></i> Shop<span class="text-accent">Vibe</span></a>
+          <p class="mt-2 mb-3">Shop. Smile. Repeat.</p>
+          <p class="small mb-1"><i class="bi bi-geo-alt"></i> 12 Market Street, Lagos</p>
+          <p class="small mb-1"><i class="bi bi-telephone"></i> +234 800 000 0000</p>
+          <p class="small"><i class="bi bi-envelope"></i> hello@shopvibe.example</p>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#products">Shop</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-3">
+          <h5>Follow Us</h5>
+          <div class="socials">
+            <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <h5>Subscribe to our Newsletter</h5>
+          <p class="small">Get the latest deals and updates.</p>
+          <form id="newsletter" class="newsletter needs-validation" novalidate>
+            <input type="email" class="form-control" placeholder="Enter your email" required aria-label="Email address">
+            <button type="submit" aria-label="Subscribe"><i class="bi bi-send-fill"></i></button>
+            <div class="invalid-feedback">Please enter a valid email.</div>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 ShopVibe. All rights reserved.</p>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Help</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#home" id="toTop" class="to-top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
+
+  <!-- ==================== BOOTSTRAP COMPONENTS ==================== -->
+  <!-- Offcanvas cart -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartDrawer" aria-labelledby="cartTitle">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="cartTitle"><i class="bi bi-cart3"></i> Your Cart</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <ul id="cartItems" class="list-unstyled flex-grow-1"></ul>
+      <p id="cartEmpty" class="text-muted text-center">Your cart is empty.</p>
+      <div class="cart-total d-flex justify-content-between"><strong>Total</strong><strong id="cartTotal">₦0</strong></div>
+      <button class="btn btn-dark-green w-100 mt-3">Checkout</button>
+    </div>
+  </div>
+
+  <!-- Toast notification -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cartToast" class="toast" role="status" aria-live="polite" aria-atomic="true">
+      <div class="toast-body d-flex align-items-center gap-2">
+        <i class="bi bi-check-circle-fill"></i>
+        <span id="toastMsg">Added to cart</span>
+        <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
